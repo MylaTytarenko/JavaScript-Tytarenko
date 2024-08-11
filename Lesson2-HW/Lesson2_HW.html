@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // создаем консоль
+    let myArray = [
+        1984,
+        "My World!",
+        false,
+        { id: 1, titel: "Test"},
+        [4, 5, 6],
+        function () { return "I am a function"; },
+        Symbol("unique"),
+        /pattern/,
+        null,
+        undefined
+        ];
+    // Выводим в
+
+    myArray.forEach(element => console.log(element));
+
+
+    //обьекты которые описывают книги
+
+    let book1 = {
+        title: "The Creat Gatsby",
+        pageCount: 180,
+        genre: "Classic",
+    };
+    let book2 = {
+        title: "Brave New World",
+        pageCount: 270,
+        genre: "Science",
+    };
+    let book3 = {
+        title: "Pride",
+        pageCount: 350,
+        genre: "Romance",
+    };
+    //выводим на консоль
+    console.log("Book 1:", book1);
+    console.log("Book 2:", book2);
+    console.log("Book 3:", book3);
+
+    // создаем обьекты
+     let  book1 = {
+         title: " The Creat Gatsby",
+         pageCount: 180,
+         genre: "Classic",
+         autors: [
+             { name: "Scott Fitzgerald", age: 44 }
+         ]
+     };
+     let book2 = {
+         title: "Brave New World",
+         pageCount: 270,
+         genre: "Science",
+         autors: [
+             { name: "Aldous Huxley", age: 55 }
+         ]
+     };
+     let book3 = {
+         title: "Pride",
+         pageCount: 350,
+         genre: "Romance",
+         autors: [
+             {name: " Sidney Karger", age: 60}
+         ]
+     };
+     // выведение на консоль
+    console.log("Book 1:", book1);
+    console.log("Book 2:", book2);
+    console.log("Book 3:", book3);
+
+    //стровення массиву з 10 користувачами
+    const users = [
+        { name: "Alex", username: "alex23", password: "123"},
+        { name: "Ann", username: "ann23", password: "123"},
+        { name: "Christy", username: "christy23", password: "123"},
+        { name: "Tom", username: "tom23", password: "123"},
+        { name: "Bob", username: "bob23", password: "123"},
+        { name: "David", username: "david23", password: "123"},
+        { name: "Max", username: "max123", password: "123"},
+        { name: "Eva", username: "eva123", password: "123"},
+        { name: "Olga", username: "olga123", password: "123"}
+    ];
+    //выведение на консоль
+    user.forEach(user => {
+        console.log(`Username: ${user.name}, Password: ${user.password}`);
+    });
+
+    //створення массиву температури
+    const temperatures = [
+        { day: "Monday", morning: 15, day: 25, evening: 18},
+        { day: "Tuesday", morning: 16, day: 26, evening: 19},
+        { day: "Wednesday", morning: 17, day: 27, evening: 20},
+        { day: "Thursday", morning: 18, day: 28, evening: 21},
+        { day: "Friday", morning: 19, day: 29, evening: 22},
+        { day: "Saturday", morning: 20, day: 30, evening:  23},
+        { day: "Sunday", morning: 21, day: 31, evening: 24}
+    ];
+    //виведення температуры для середи
+    const wednesday = temperatures.find(day =>day.day ==="Wednesday");
+
+    //умова
+    function checkValue(x) {
+        if (x !== 0) {
+            console.log(`True`);
+        } else {
+            console.log(`False`)
+        }
+    }
+    //перевірка
+    consolevaluesToCheck = [1, 0, -3];
+
+    valuesToCheck.forEach(value => {
+        console.log(`Check for x=${value}:`);
+        checkValue(value);
+    });
+
+</script>
+</body>
+</html>
