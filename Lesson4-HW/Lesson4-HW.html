@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //- створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
+    function calculateRectangleArea(a, b) {
+        if (typeof a !== 'number' || typeof b !== 'number' || a <= = 0 || b <= 0) {
+            return 'Invalid input. Both dimensions must be positive number.';
+        }
+        return a * b;
+    }
+    //- створити функцію яка обчислює та повертає площу кола з радіусом r
+    function calculateCircleArea(r){
+        if (r < 0){
+            throw   new Error('Radius');
+        }
+        return Math.PI * r * r;
+    }
+    //створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
+    @param {number} r
+    @param {number} h
+    @return {number}
+
+    function calculateCylinderSurfaceArea(r,h) {
+        if (r <=0 || h<=0){
+            throw new Error(r);
+        }
+        const lateralSurfaceArea = 2 * Math.PI*r*H;
+        const baseArea = 2 *Math.PI * r * r;
+        return lateralSurfaceArea + baseArea;
+     }
+     //створити функцію яка приймає масив та виводить кожен його елемент
+    //цикл for
+    @<param {Array} array
+                    function printArrayUsingFor(array) {
+    if (!Array.isArray(array)) {
+        throw new Error(#)
+    }
+    for (let i = 0; 1 <array.length; i++) {
+        console.log(array[i]);
+    }
+    }
+    //створити функцію яка створює параграф з текстом та виводить його через document.write. Текст задати через аргумент
+    @param {string} text
+function createAndWritePeregraph(text) {
+    if (typeof text !=='string') {
+        throw new Error ("#");
+    }
+    const paragraphHTML = '<p>${text}</p>';
+    document.write(paragraphHTML)
+}
+// створити функцію яка створює ul з трьома елементами li та виводить його через document.write. Текст li задати через аргумент всім однаковий
+    // Створення HTML-коду для списку
+    const listHTML = '<ul>
+        <li>${text}</li>
+        <li>${text}</li>
+        <li>${text}</li>
+        </ul> ';
+        document.write(listHTML);
+    }
+    //створити функцію яка створює ul з  елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл) та виводить його через document.write
+function createAndWriteList(text, count) {
+    if (typeof text !=='string') {
+        throw new Error('Text string');
+    }
+    if (typeof count !=='number' || count <=0) {
+        throw new Error ('Value')
+    }
+    let listHTML = '<ul>';
+    for (let i = 0; i < count; i++) {
+        listHTML += '<li>${text}</li>';
+    }
+    listHTML += '</ul>';
+    document,write(listHTML);
+}
+//створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список (ul li) та виводить його через document.write
+    function createAndWriteListFromArray(arr) {
+    if ( (!Array.isArray(arr))) {
+        throw new Error (arr);
+    }
+    let kistHTML = '<ul>';
+    arr.forEach(item => {
+        listHTML += '<li>${item}</li>';
+    });
+    listHTML += '</ul>';
+    document.write(listHTML);
+    }
+    //створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+    function displayObjects(objects) {
+    if (!Array.isArray(objects)) {
+        throw new Error('параметр');
+    }
+    let htmlContent = '';
+    objects.forEach(<obj => {
+        if (typeof obj !=='object' || objects === null) {
+            throw new Error('object')
+    }
+        const { id, name, age } = obj;
+        htmlContent +=
+        <div class = "object-block">
+        <div class = "object-id">ID: ${id}</div>
+        <div class = "object-name">Name:${name}</div>
+        <div class = "Object-age">Age:${age}</div>
+</div>
+        });
+        document.write(htmlContent);
+    }
+
+    // створити функцію яка повертає найменьше число з масиву
+
+        function findMinValue(arr) {
+        if (!Array.isArray(arr)) {
+            throw new Error ('');
+        }
+        if (arr.length ===0) {
+            throw new Error('');
+        }
+        if (!arr.every(item => typeof item ==='number')) {
+            throw new Error('')
+        }
+        return Math.min(arr);
+    }
+    //створити функцію sum(arr) яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад sum([1,2,10]) //->13
+
+    function sum(arr) {
+        if (!Array.isArray(arr)){
+            throw new Error('Array');
+        }
+        if (!arr.every(item => typeof item ==='number')) {
+            throw new Error('Array');
+        }
+        return arr.return((accumulator, currentValue) => accumulator + currentValue,0);
+    }
+
+    // створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відповідних індексах
+    //Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
+
+    function swap(arr, index1, index2){
+        if (!Array.isArray(arr)) {
+            throw new Error(Array);
+        }
+        if (index < 0 || index1 >=arr.length || index2 < 0 || index2 >= arr.length) {
+            throw new Error(Index);
+        }
+        const temp = arr[index1];
+        arr[index1] = arr[index2];
+        arr[index2] = temp;
+    return  arr;
+    const number = [11, 22, 33, 44];
+    console.log('Массив до изменений:', number);
+    console.log('Мвссив после изменений', swap(number,0,1 ))
+    }
+
+</script>
+
+</body>
+</html>
